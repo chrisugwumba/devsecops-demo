@@ -80,8 +80,6 @@ jobs:
     env:
       REGISTRY: ghcr.io
       IMAGE_NAME: ${{ github.repository }}
-      - name: Convert image name to lowercase
-        run: echo "IMAGE_NAME=$(echo '${{ github.repository }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
     outputs:
       image_tag: ${{ steps.set_output.outputs.image_tag }}
     steps:
